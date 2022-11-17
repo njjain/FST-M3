@@ -1,0 +1,14 @@
+# Specify base image
+FROM node:16-alpine
+
+# Create a Work Directory
+WORKDIR /usr/app
+
+#Copy files to container
+COPY ./ ./
+
+# Run install command
+RUN npm install
+
+#Default command
+CMD ["npm","Run", "start"]
